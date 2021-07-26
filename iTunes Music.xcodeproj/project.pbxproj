@@ -3,23 +3,36 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		DC203C5326A7070300C0D7D6 /* iTunes_MusicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC203C5226A7070300C0D7D6 /* iTunes_MusicApp.swift */; };
-		DC203C5526A7070300C0D7D6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC203C5426A7070300C0D7D6 /* ContentView.swift */; };
+		DC203C5526A7070300C0D7D6 /* MusicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC203C5426A7070300C0D7D6 /* MusicListView.swift */; };
 		DC203C5726A7070400C0D7D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC203C5626A7070400C0D7D6 /* Assets.xcassets */; };
 		DC203C5A26A7070400C0D7D6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC203C5926A7070400C0D7D6 /* Preview Assets.xcassets */; };
+		DC4CA2DE26AF50B700C00D06 /* MusicFeedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA2DD26AF50B700C00D06 /* MusicFeedResult.swift */; };
+		DC4CA2E526AF551100C00D06 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA2E126AF551100C00D06 /* NetworkManager.swift */; };
+		DC4CA2E626AF551100C00D06 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA2E326AF551100C00D06 /* HTTPMethod.swift */; };
+		DC4CA2E726AF551100C00D06 /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA2E426AF551100C00D06 /* APIResult.swift */; };
+		DC4CA2E926AF555F00C00D06 /* MusicListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA2E826AF555F00C00D06 /* MusicListViewModel.swift */; };
+		DC4CA2EC26AF5F5B00C00D06 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DC4CA2EB26AF5F5B00C00D06 /* Kingfisher */; };
+		DC4CA2EE26AF63F800C00D06 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4CA2ED26AF63F800C00D06 /* Alerts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DC203C4F26A7070300C0D7D6 /* iTunes Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTunes Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC203C5226A7070300C0D7D6 /* iTunes_MusicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunes_MusicApp.swift; sourceTree = "<group>"; };
-		DC203C5426A7070300C0D7D6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DC203C5426A7070300C0D7D6 /* MusicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListView.swift; sourceTree = "<group>"; };
 		DC203C5626A7070400C0D7D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC203C5926A7070400C0D7D6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DC203C5B26A7070400C0D7D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC4CA2DD26AF50B700C00D06 /* MusicFeedResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicFeedResult.swift; sourceTree = "<group>"; };
+		DC4CA2E126AF551100C00D06 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DC4CA2E326AF551100C00D06 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		DC4CA2E426AF551100C00D06 /* APIResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
+		DC4CA2E826AF555F00C00D06 /* MusicListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewModel.swift; sourceTree = "<group>"; };
+		DC4CA2ED26AF63F800C00D06 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC4CA2EC26AF5F5B00C00D06 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +67,11 @@
 			isa = PBXGroup;
 			children = (
 				DC203C5226A7070300C0D7D6 /* iTunes_MusicApp.swift */,
-				DC203C5426A7070300C0D7D6 /* ContentView.swift */,
+				DC203C5426A7070300C0D7D6 /* MusicListView.swift */,
+				DC4CA2E826AF555F00C00D06 /* MusicListViewModel.swift */,
+				DC4CA2DD26AF50B700C00D06 /* MusicFeedResult.swift */,
+				DC4CA2ED26AF63F800C00D06 /* Alerts.swift */,
+				DC4CA2DF26AF551100C00D06 /* Networking */,
 				DC203C5626A7070400C0D7D6 /* Assets.xcassets */,
 				DC203C5B26A7070400C0D7D6 /* Info.plist */,
 				DC203C5826A7070400C0D7D6 /* Preview Content */,
@@ -67,6 +85,32 @@
 				DC203C5926A7070400C0D7D6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DC4CA2DF26AF551100C00D06 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DC4CA2E026AF551100C00D06 /* Manager */,
+				DC4CA2E226AF551100C00D06 /* Entities */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		DC4CA2E026AF551100C00D06 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				DC4CA2E126AF551100C00D06 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		DC4CA2E226AF551100C00D06 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				DC4CA2E326AF551100C00D06 /* HTTPMethod.swift */,
+				DC4CA2E426AF551100C00D06 /* APIResult.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +129,9 @@
 			dependencies = (
 			);
 			name = "iTunes Music";
+			packageProductDependencies = (
+				DC4CA2EB26AF5F5B00C00D06 /* Kingfisher */,
+			);
 			productName = "iTunes Music";
 			productReference = DC203C4F26A7070300C0D7D6 /* iTunes Music.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +159,9 @@
 				Base,
 			);
 			mainGroup = DC203C4626A7070300C0D7D6;
+			packageReferences = (
+				DC4CA2EA26AF5F5B00C00D06 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = DC203C5026A7070300C0D7D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +188,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC203C5526A7070300C0D7D6 /* ContentView.swift in Sources */,
+				DC4CA2E526AF551100C00D06 /* NetworkManager.swift in Sources */,
+				DC203C5526A7070300C0D7D6 /* MusicListView.swift in Sources */,
+				DC4CA2EE26AF63F800C00D06 /* Alerts.swift in Sources */,
 				DC203C5326A7070300C0D7D6 /* iTunes_MusicApp.swift in Sources */,
+				DC4CA2E726AF551100C00D06 /* APIResult.swift in Sources */,
+				DC4CA2E626AF551100C00D06 /* HTTPMethod.swift in Sources */,
+				DC4CA2E926AF555F00C00D06 /* MusicListViewModel.swift in Sources */,
+				DC4CA2DE26AF50B700C00D06 /* MusicFeedResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +384,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DC4CA2EA26AF5F5B00C00D06 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DC4CA2EB26AF5F5B00C00D06 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC4CA2EA26AF5F5B00C00D06 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DC203C4726A7070300C0D7D6 /* Project object */;
 }
