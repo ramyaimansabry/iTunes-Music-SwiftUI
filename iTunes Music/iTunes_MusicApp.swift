@@ -9,9 +9,28 @@ import SwiftUI
 
 @main
 struct iTunes_MusicApp: App {
+    
+    @Environment(\.scenePhase) var scenePhase
+    
+    init() {
+        
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MusicListView()
+        }
+        .onChange(of: scenePhase) { phase in
+            switch phase {
+            case .background:
+                break
+            case .inactive:
+                break
+            case .active:
+                break
+            @unknown default:
+                break
+            }
         }
     }
 }
