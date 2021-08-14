@@ -10,14 +10,14 @@ import Foundation
 
 class MusicListViewModel: ObservableObject {
     
-    private var networkManager = NetworkManager()
     @Published private(set) var items = [Music]()
     @Published var alertItem: AlertItem?
     
     init() { }
     
     func fetchMusicFeed() {
-        guard let url: URL = URL(string: "https://rss.itunes.apple.com/api/v1/us/apple-music/coming-soon/all/50/explicit.json") else { return }
+        let networkManager = NetworkManager()
+        guard let url: URL = URL(string: "https://rss.itunes.apple.com/api/v1/us/apple-music/coming-soon/all/100/explicit.json") else { return }
         _ = networkManager.request(url: url, httpMethod: .get, parameters: nil, headers: nil) { [weak self] (result: APIResult<RSSResult>) in
             
             guard let self = self else { return }
