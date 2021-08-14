@@ -11,21 +11,25 @@ import Foundation
 class MusicListViewModel: ObservableObject {
     
     private var networkManager = NetworkManager()
-    @Published var items = [Music]()
+    @Published private(set) var items = [Music]()
     @Published var alertItem: AlertItem?
     
-    init() {
-        
-    }
+    init() { }
     
     func fetchMusicFeed() {
         guard let url: URL = URL(string: "https://rss.itunes.apple.com/api/v1/us/apple-music/coming-soon/all/50/explicit.json") else { return }
-        _ = networkManager.request(url: url, httpMethod: .get, parameters: nil, headers: nil) { (result: APIResult<RSSResult>) in
+        _ = networkManager.request(url: url, httpMethod: .get, parameters: nil, headers: nil) { [weak self] (result: APIResult<RSSResult>) in
+            
+            guard let self = self else { return }
+            self.handleFetchingMusicFeedResult(result: result)
+        }
+    }
+    
+    private func handleFetchingMusicFeedResult(result: APIResult<RSSResult>) {
+        DispatchQueue.main.async {
             switch result {
             case .success(let data):
-                DispatchQueue.main.async {
-                    self.items = data.feed.results
-                }
+                self.items = data.feed.results
                 break
             case .failure(let error):
                 self.alertItem = AlertItem(title: "Error", message: error?.localizedDescription ?? "UnExpected Error", buttonTitle: "OK")

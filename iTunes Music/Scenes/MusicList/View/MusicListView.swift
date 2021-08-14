@@ -11,7 +11,11 @@ import Kingfisher
 
 struct MusicListView: View {
     
-    @ObservedObject private var viewModel = MusicListViewModel()
+    @ObservedObject private var viewModel: MusicListViewModel
+    
+    init(viewModel: MusicListViewModel = .init()) {
+        _viewModel = ObservedObject(wrappedValue: viewModel)
+    }
     
     var body: some View {
         NavigationView {
@@ -40,7 +44,8 @@ struct MusicListView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MusicListView()
+        let musicViewModel = MusicListViewModel()
+        MusicListView(viewModel: musicViewModel)
 //            .previewDevice(PreviewDevice(rawValue: "iPhone X"))
     }
 }
