@@ -44,8 +44,7 @@ struct MusicListView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let musicViewModel = MusicListViewModel()
-        MusicListView(viewModel: musicViewModel)
+        MusicListView()
 //            .previewDevice(PreviewDevice(rawValue: "iPhone X"))
     }
 }
